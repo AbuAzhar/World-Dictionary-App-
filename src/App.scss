@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+/* Main App Container */
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    /* Header */
+    .Header {
+        width: 100%;
+        background: black;
+
+        .Title {
+            font-size: 2rem;
+            color: red;
+            font-weight: bold;
+        }
+    }
+
+    /* Result Component */
+    .Result {
+        width: 100%;
+
+        /* Results AppBar */
+        .Results {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Word Name */
+            .wordName {
+                display: flex;
+                width: 97%;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px;
+
+                /* Word Title */
+                .wordTitle {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                /* Audio Button */
+                button {
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+
+                    &:hover {
+                        color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Result Content */
+    .resultContent {
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 20px;
+        color: white;
+
+        /* Typography */
+        h2, h4 {
+            font-weight: bold;
+        }
+
+        p, li {
+            font-size: 1rem;
+        }
+
+        /* Example List */
+        ul {
+            list-style: none;
+
+            li {
+                &::before {
+                    content: "•";
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
